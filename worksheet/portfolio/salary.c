@@ -1,23 +1,40 @@
+/* salary.c */
 
 #include <stdio.h>
 
-/*
- * Potrfolio submission
- * Name:
- * ID:
- */
+/*--------------------- *\
+|* Potrfolio submission  |
+|------------------------|
+|* Name: Sam Dillon      |
+|* ID: 201960792         |
+\*----------------------*/
 
- int main( void ) {
 
-    // define and initialise variables for the problem data 
+//////// CONSTANTS ////////
+#define NATIONAL_INSURANCE_RATE 0.08f
+#define TAX_RATE 0.15f
 
-    // calculate the deductions and final take-home salary
+#define MINIMUM_WAGE 12500.00f
+#define SALARY 36250.00f
+//////// CONSTANTS ////////
 
-    // Use only these print statement with appropriate formatting and variable names
-    //printf("Salary £...",var_name);
-    //printf("NI contribution £...",var_name);
-    //printf("Tax contribution £...",var_name);
-    //printf("Take home salary £...",var_name);
 
-    return 0;
- }
+int main() {
+
+   //Calculations
+   float salary = SALARY; //Start var as const value.
+
+   float nationalInsurance = (salary * NATIONAL_INSURANCE_RATE);
+   salary -= nationalInsurance; //Take away NI contrib.
+   float tax = (salary * TAX_RATE);
+   salary -= tax; //Take away tax contrib.
+
+    
+   //Show values
+   printf("Salary £%.2f\n", SALARY);
+   printf("NI contribution £%.2f\n", nationalInsurance);
+   printf("Tax contribution £%.2f\n", tax);
+   printf("Take home salary £%.2f\n", salary);
+
+   return 0;
+}

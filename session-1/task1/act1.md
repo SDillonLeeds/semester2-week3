@@ -34,3 +34,4 @@ You can find the size of a file using
 
   `ls -al`
   
+282

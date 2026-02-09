@@ -1,14 +1,13 @@
+/* hello.c */
+//Prints "Hello World" to the console.
 
-/*
- * Hello world program
- */
+#include <stdio.h> //Like import from py. This lets us use printf().
 
-#include <stdio.h>
+int main() { //Must have a main function, this is called when the program is run.
+    const char* text = "Hello World\n"; //C equiv. to std::string.
+    printf("%s", text); //Show in console
 
-int main( void ) {
-    
-    printf("Hello\n");
+    return 0; //Exit code of 0 (No issues)
+} //Fancy brackets rather than indentation alone. Indentation optional.
 
-    return 0;    
-}	
-
+//.o(bject) file is 15,960B (16kB).
