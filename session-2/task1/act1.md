@@ -33,3 +33,4 @@ Adjust the variable values to test the code.
 3. **Research question**
 
 Why does `sizeof()` return a `long int` value rather than an `int`?
+ - It returns type `size_t` which is a form of `unsigned long int`.

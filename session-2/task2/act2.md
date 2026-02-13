@@ -13,6 +13,7 @@ Does the output match what you expect based on the machine architecture?
 Extend the program to output data about a double pointer:
 - Do you expect the size to change?
 - Why?
+- Doubles (obvs) to gain higher precision.
 
 2. **Pointer operators**
 
@@ -25,8 +26,10 @@ Compile and run the code and examine the output.
 - We use the dereferencing operator `*` to get the value stored at the address stored in the pointer.
 
 What format is the memory address displayed as?
+- Hexa-decimal.
 
 3. Research and discuss why a pointer is statically typed.
 
 - ie. a pointer to an integer has to be declared as `int *p`
 - Hint: it is not connected to what it stores - all pointers store an address
+- When dereferenced the pointer must give some type - It can't return arbitrary bytes.

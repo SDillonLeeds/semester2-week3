@@ -9,6 +9,19 @@
 #include <stdio.h>
 #include <math.h>
 
+
+float quadratic(float a, float b, float c, int sign) {
+    /*
+    q = (-b +/- sqrt(b^2 - 4ac)) / 2a
+    */
+    float multiplier = -b + (sign * sqrt(
+        b*b - 4*a*c
+    ));
+    float divisor = 2*a;
+    return multiplier / divisor;
+}
+
+
 int main( void ) {
 
     float a = 1.0;
@@ -22,7 +35,11 @@ int main( void ) {
      * Print out the final results for the 2 roots as float values.
      */
 
+    root1 = quadratic(a, b, c, -1); //Negative root (Is positive: False)
+    root2 = quadratic(a, b, c, +1); //Positive root (Is positive: True)
+
     
+    printf("Results: (%f, %f)\n", root1, root2);
 
     return 0;
 }
