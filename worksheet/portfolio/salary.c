@@ -14,7 +14,7 @@
 #define NATIONAL_INSURANCE_RATE 0.08f
 #define TAX_RATE 0.15f
 
-#define MINIMUM_WAGE 12500.00f
+#define MINIMUM_WAGE 12.5e3f /* £12.5k */
 #define SALARY 36250.00f
 //////// CONSTANTS ////////
 
@@ -26,7 +26,7 @@ int main() {
 
    float nationalInsurance = (salary * NATIONAL_INSURANCE_RATE);
    salary -= nationalInsurance; //Take away NI contrib.
-   float tax = (salary * TAX_RATE);
+   float tax = (salary - MINIMUM_WAGE) * TAX_RATE;
    salary -= tax; //Take away tax contrib.
 
     
